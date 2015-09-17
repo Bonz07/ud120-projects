@@ -24,17 +24,18 @@ I also removed the entry for Eugene E. Lockhart since this row had no values for
 	
 In order to optimise and select the most relevant features I used the scikit-learn module SelectKBest to identify the top ten most influential features. 
 
-Feature	Score
-exercised_stock_options	24.815
-total_stock_value	24.183
-Bonus	20.792
-Salary	18.290
-fraction_emails_to_POI	16.410
-deferred_income	11.458
-long_term_incentive	9.922
-restricted_stock	9.213
-total_payments	8.773
-shared_receipt_with_POI	8.589
+| Feature			| Score  |
+|-------------------------------|--------|
+| exercised_stock_options	| 24.815 |
+| total_stock_value		| 24.183 |
+| bonus				| 20.792 |
+| salary			| 18.290 |
+| fraction_emails_to_POI	| 16.410 |
+| deferred_income		| 11.458 |
+| long_term_incentive		| 9.922  |
+| restricted_stock		| 9.213  |
+| total_payments		| 8.773  |
+| shared_receipt_with_POI	| 8.589  |
 
 When I first ran the SelectKBest algorithm the only email feature in the top ten was shared_receipt_with_POI. I was surprised that neither from_this_person_to_POI nor from_POI_to_this_person were included in the most influential features as I would have thought the level of interaction with a POI would have been a strong indicator of also being a POI. Plotting the data (Fig 3) it didn’t really show a strong correlation, hence the low score. However when I plotted the fraction of the total emails that went to a POI or came from a POI (Fig 4) I found a much clearer link. This made sense as email volumes can vary quite dramatically and so a percentage of the total is a far better indicator. Once I re-ran the SelectKBest the fraction_emails_to_POI became the 5th strongest feature. I used the above ten most important features in my final analysis.
 
