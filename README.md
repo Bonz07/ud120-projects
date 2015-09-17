@@ -42,7 +42,7 @@ When I first ran the SelectKBest algorithm the only email feature in the top ten
 
 | Fig 3.	| Fig 4.	|
 | ------------- | --------------|
-| <img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/Enron%20data.png" width="400">	| <img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/Outliers2.png" width="400"> |
+| <img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/POI%20emails.png" width="400">	| <img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/Fraction%20of%20emails%20POI.png" width="400"> |
 
 ####Algorithm
 
