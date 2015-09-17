@@ -13,7 +13,7 @@ The dataset was made up of financial and email features. The email data containe
 The original dataset contained an entry for the **TOTAL** of all the financial features of each of the Enron employees. This was obvious when plotting the data as it was several magnitudes larger than any other data point (Fig 1), I therefore removed this line from the dataset. Once this line was removed then the same plot (Fig 2) showed only a handful of employees as outliers, however this was expected in a large organisation.  
 
 Fig 1.						Fig 2.
-![Fig 1](https://github.com/Bonz07/ud120-projects/blob/master/final_project/Enron%20data.png {width=40px height=400px})
+![Fig 1](https://github.com/Bonz07/ud120-projects/blob/master/final_project/Enron%20data.png)
 
 
 I also removed the entry for **Eugene E. Lockhart** since this row had no values for any of the features. Finally after looking at the data in more detail I removed an entry for **The Travel Agency in the Park** as I was only interested in people for my machine learning model. After removing these three entries I was left with 143 records in the dataset.
