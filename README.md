@@ -59,26 +59,26 @@ Prior to training the K Means Clustering, Decision Tree and SVM classifiers I sc
 
 The tuning parameters and the detailed scoring for each model can be found below:
 
-1. Naïve Bayes (no scaling or tuning):
+1) Naïve Bayes (no scaling or tuning):
 
 Accuracy: 0.33547, Precision: 0.14750, Recall: 0.83350, F1: 0.25064, F2: 0.43182
 Total predictions: 15000, True positives: 1667, False positives: 9635, False negatives:  333, True negatives: 3365
 
-2. Decision Tree (features scaled using Min-Max scaler):
+2) Decision Tree (features scaled using Min-Max scaler):
 
 GridSearchCV(cv=None, estimator=DecisionTreeClassifier(compute_importances=None, criterion=gini, max_depth=None, max_features=None, min_density=None, min_samples_leaf=1, min_samples_split=2, random_state=None, splitter=best)
 
 Accuracy: 0.82047, Precision: 0.32632, Recall: 0.32550, F1: 0.32591, F2: 0.32566
 Total predictions: 15000, True positives:  651, False positives: 1344, False negatives: 1349, True negatives: 11656
 
-3. K means Clustering (features scaled using Min-Max scaler) 
+3) K means Clustering (features scaled using Min-Max scaler) 
 
 KMeans(copy_x=True, init=k-means++, max_iter=300, n_clusters=2, n_init=10, n_jobs=1, precompute_distances=True, random_state=None, tol=0.001, verbose=0)
 
 Accuracy: 0.83760, Precision: 0.23086, Recall: 0.09350, F1: 0.13310, F2: 0.10613
 Total predictions: 15000, True positives:  187, False positives:  623, False negatives: 1813	, True negatives: 12377
 
-4. Support Vector Machines (features scaled using Min-Max scaler) 
+**4) Support Vector Machines (features scaled using Min-Max scaler)** 
 
 SVC(C=1000, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0, kernel=rbf, max_iter=-1, probability=False, random_state=None, shrinking=True, tol=0.001, verbose=False)
 
