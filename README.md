@@ -26,16 +26,16 @@ In order to optimise and select the most relevant features I used the scikit-lea
 
 | Feature			| Score  |
 |-------------------------------|--------|
-| exercised_stock_options	| 24.815 |
-| total_stock_value		| 24.183 |
-| bonus				| 20.792 |
-| salary			| 18.290 |
-| fraction_emails_to_POI	| 16.410 |
-| deferred_income		| 11.458 |
-| long_term_incentive		| 9.922  |
-| restricted_stock		| 9.213  |
-| total_payments		| 8.773  |
-| shared_receipt_with_POI	| 8.589  |
+| *exercised_stock_options*	| 24.815 |
+| *total_stock_value*		| 24.183 |
+| *bonus*			| 20.792 |
+| *salary*			| 18.290 |
+| *fraction_emails_to_POI*	| 16.410 |
+| *deferred_income*		| 11.458 |
+| *long_term_incentive*		| 9.922  |
+| *restricted_stock*		| 9.213  |
+| *total_payments*		| 8.773  |
+| *shared_receipt_with_POI*	| 8.589  |
 
 When I first ran the SelectKBest algorithm the only email feature in the top ten was shared_receipt_with_POI. I was surprised that neither from_this_person_to_POI nor from_POI_to_this_person were included in the most influential features as I would have thought the level of interaction with a POI would have been a strong indicator of also being a POI. Plotting the data (Fig 3) it didn’t really show a strong correlation, hence the low score. However when I plotted the fraction of the total emails that went to a POI or came from a POI (Fig 4) I found a much clearer link. This made sense as email volumes can vary quite dramatically and so a percentage of the total is a far better indicator. Once I re-ran the SelectKBest the fraction_emails_to_POI became the 5th strongest feature. I used the above ten most important features in my final analysis.
 
@@ -50,10 +50,10 @@ Prior to training the K Means Clustering, Decision Tree and SVM classifiers I sc
 
 | Algorithm		| Accuracy	| Precision	| Recall  |
 | --------------------- | ------------- | ------------- | ------- |
-| **Naïve Bayes**	| 0.33547	| 0.14750	| 0.83350 |
-| **Decision Tree**	| 0.82047	| 0.32632	| 0.32550 |
-| **K Means Clustering**| 0.83760	| 0.23086	| 0.09350 |
-| **SVM**		| 0.84119	| 0.26882	| 0.15700 |
+| *Naïve Bayes* 	| 0.33547	| 0.14750	| 0.83350 |
+| *Decision Tree*	| 0.82047	| 0.32632	| 0.32550 |
+| *K Means Clustering*  | 0.83760	| 0.23086	| 0.09350 |
+| *SVM*			| 0.84119	| 0.26882	| 0.15700 |
 
 The tuning parameters and the detailed scoring for each model can be found below:
 
