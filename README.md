@@ -1,5 +1,4 @@
-Identifying Fraud at Enron using Emails and Financial Data  
-Udacity Data Analysis Nanodegree – Project 4
+Identifying Fraud at Enron using Emails and Financial Data, Udacity Data Analysis Nanodegree – Project 4
 ==============
 ####Introduction
 
