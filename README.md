@@ -14,7 +14,7 @@ The original dataset contained an entry for the **TOTAL** of all the financial f
 
 | Fig 1.	| Fig 2.	|
 | ------------- | --------------|
-| <img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/Enron%20data.png" width="450">	| <img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/Outliers2.png" width="450"> |
+| <img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/Enron%20data.png" width="400">	| <img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/Outliers2.png" width="400"> |
 
 
 I also removed the entry for **Eugene E. Lockhart** since this row had no values for any of the features. Finally after looking at the data in more detail I removed an entry for **The Travel Agency in the Park** as I was only interested in people for my machine learning model. After removing these three entries I was left with 143 records in the dataset.
@@ -40,8 +40,9 @@ In order to optimise and select the most relevant features I used the scikit-lea
 
 When I first ran the SelectKBest algorithm the only email feature in the top ten was *shared_receipt_with_POI*. I was surprised that neither *from_this_person_to_POI* nor *from_POI_to_this_person* were included in the most influential features as I would have thought the level of interaction with a POI would have been a strong indicator of also being a POI. Plotting the data (Fig 3) it didn’t really show a strong correlation, hence the low score. However when I plotted the fraction of the total emails that went to a POI or came from a POI (Fig 4) I found a much clearer link. This made sense as email volumes can vary quite dramatically and so a percentage of the total is a far better indicator. Once I re-ran the SelectKBest the *fraction_emails_to_POI* became the 5th strongest feature. I used the above ten most important features in my final analysis.
 
-Fig 3.						Fig 4.
-  
+| Fig 3.	| Fig 4.	|
+| ------------- | --------------|
+| <img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/Enron%20data.png" width="400">	| <img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/Outliers2.png" width="400"> |
 
 ####Algorithm
 
