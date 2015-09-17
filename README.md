@@ -13,7 +13,7 @@ The dataset was made up of financial and email features. The email data containe
 The original dataset contained an entry for the **TOTAL** of all the financial features of each of the Enron employees. This was obvious when plotting the data as it was several magnitudes larger than any other data point (Fig 1), I therefore removed this line from the dataset. Once this line was removed then the same plot (Fig 2) showed only a handful of employees as outliers, however this was expected in a large organisation.  
 
 Fig 1.						Fig 2.
-<img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/Enron%20data.png" width="48">
+<img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/Enron%20data.png" width="250">
 ![Fig 1](https://github.com/Bonz07/ud120-projects/blob/master/final_project/Enron%20data.png)
 
 
