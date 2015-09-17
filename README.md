@@ -1,7 +1,8 @@
 ud120-projects
 ==============
 
-###Identifying Fraud at Enron using Emails and Financial Data - Udacity Data Analysis Nanodegree – Project 4
+###Identifying Fraud at Enron using Emails and Financial Data  
+###Udacity Data Analysis Nanodegree – Project 4
 
 
 ####Introduction
@@ -110,15 +111,15 @@ I enjoyed the challenge of studying machine learning techniques and the data wor
 
 ####References
 
--Udacity module page - https://www.udacity.com/course/intro-to-machine-learning--ud120  
--Enron Wikipedia - https://en.wikipedia.org/wiki/Enron  
--Sci-kit learn page - http://scikit-learn.org/stable/  
--SelectKBest page - http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html  
--Mix Max Scaler - http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html  
--Naïve Bayes - http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html  
--Decision Trees - http://scikit-learn.org/stable/modules/tree.html  
--K Means Clustering - http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html  
--Support Vector Machines (SVM) - http://scikit-learn.org/stable/modules/svm.html  
+Udacity module page - https://www.udacity.com/course/intro-to-machine-learning--ud120  
+Enron Wikipedia - https://en.wikipedia.org/wiki/Enron  
+Sci-kit learn page - http://scikit-learn.org/stable/  
+SelectKBest page - http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html  
+Mix Max Scaler - http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html  
+Naïve Bayes - http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html  
+Decision Trees - http://scikit-learn.org/stable/modules/tree.html  
+K Means Clustering - http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html  
+Support Vector Machines (SVM) - http://scikit-learn.org/stable/modules/svm.html  
 
 
 
