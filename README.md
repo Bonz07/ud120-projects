@@ -1,10 +1,6 @@
-ud120-projects
+Identifying Fraud at Enron using Emails and Financial Data  
+Udacity Data Analysis Nanodegree – Project 4
 ==============
-
-###Identifying Fraud at Enron using Emails and Financial Data  
-###Udacity Data Analysis Nanodegree – Project 4
-
-
 ####Introduction
 
 Enron Corporation was one of the world’s largest energy companies before it went bankrupt in December 2001. It was revealed that the bankruptcy was caused by ‘institutionalized, systematic and creatively planned accounting fraud’. Subsequent legal trials found several members of Enron’s board guilty of being involved in the financial fraud. 
