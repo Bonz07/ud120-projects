@@ -1,10 +1,5 @@
-ud120-projects
+Identifying Fraud at Enron - Udacity Data Analysis Nanodegree
 ==============
-
-###Identifying Fraud at Enron using Emails and Financial Data  
-###Udacity Data Analysis Nanodegree – Project 4
-
-
 ####Introduction
 
 Enron Corporation was one of the world’s largest energy companies before it went bankrupt in December 2001. It was revealed that the bankruptcy was caused by ‘institutionalized, systematic and creatively planned accounting fraud’. Subsequent legal trials found several members of Enron’s board guilty of being involved in the financial fraud. 
@@ -15,49 +10,52 @@ For this project I have attempted to identify the Persons of Interest (POI) invo
 
 The dataset was made up of financial and email features. The email data contained both the content of the email messages and also associated metadata (sender and recipient information), the financial data had a range of features including salary, stock options, bonuses, expenses etc. There are 146 entries in the dataset with each entry having 21 features. It is worth noting that not every feature had a completed value and that the dataset contained a subset of the total Enron employees.
 
-The original dataset contained an entry for the TOTAL of all the financial features of each of the Enron employees. This was obvious when plotting the data as it was several magnitudes larger than any other data point (Fig 1), I therefore removed this line from the dataset. Once this line was removed then the same plot (Fig 2) showed only a handful of employees as outliers, however this was expected in a large organisation.  
+The original dataset contained an entry for the **TOTAL** of all the financial features of each of the Enron employees. This was obvious when plotting the data as it was several magnitudes larger than any other data point (Fig 1), I therefore removed this line from the dataset. Once this line was removed then the same plot (Fig 2) showed only a handful of employees as outliers, however this was expected in a large organisation.  
 
-Fig 1.						Fig 2.
+| Fig 1.	| Fig 2.	|
+| ------------- | --------------|
+| <img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/Enron%20data.png" width="400">	| <img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/Outliers2.png" width="400"> |
 
 
-
-I also removed the entry for Eugene E. Lockhart since this row had no values for any of the features. Finally after looking at the data in more detail I removed an entry for The Travel Agency in the Park as I was only interested in people for my machine learning model. After removing these three entries I was left with 143 records in the dataset.
+I also removed the entry for **Eugene E. Lockhart** since this row had no values for any of the features. Finally after looking at the data in more detail I removed an entry for **The Travel Agency in the Park** as I was only interested in people for my machine learning model. After removing these three entries I was left with 143 records in the dataset.
 
 
 
 ####Feature Selection
 	
-In order to optimise and select the most relevant features I used the scikit-learn module SelectKBest to identify the top ten most influential features. 
+In order to optimise and select the most relevant features I used the scikit-learn module **SelectKBest** to identify the top ten most influential features. 
 
-Feature	Score
-exercised_stock_options	24.815
-total_stock_value	24.183
-Bonus	20.792
-Salary	18.290
-fraction_emails_to_POI	16.410
-deferred_income	11.458
-long_term_incentive	9.922
-restricted_stock	9.213
-total_payments	8.773
-shared_receipt_with_POI	8.589
+| Feature			| Score  |
+|-------------------------------|--------|
+| *exercised_stock_options*	| 24.815 |
+| *total_stock_value*		| 24.183 |
+| *bonus*			| 20.792 |
+| *salary*			| 18.290 |
+| *fraction_emails_to_POI*	| 16.410 |
+| *deferred_income*		| 11.458 |
+| *long_term_incentive*		| 9.922  |
+| *restricted_stock*		| 9.213  |
+| *total_payments*		| 8.773  |
+| *shared_receipt_with_POI*	| 8.589  |
 
-When I first ran the SelectKBest algorithm the only email feature in the top ten was shared_receipt_with_POI. I was surprised that neither from_this_person_to_POI nor from_POI_to_this_person were included in the most influential features as I would have thought the level of interaction with a POI would have been a strong indicator of also being a POI. Plotting the data (Fig 3) it didn’t really show a strong correlation, hence the low score. However when I plotted the fraction of the total emails that went to a POI or came from a POI (Fig 4) I found a much clearer link. This made sense as email volumes can vary quite dramatically and so a percentage of the total is a far better indicator. Once I re-ran the SelectKBest the fraction_emails_to_POI became the 5th strongest feature. I used the above ten most important features in my final analysis.
+When I first ran the SelectKBest algorithm the only email feature in the top ten was *shared_receipt_with_POI*. I was surprised that neither *from_this_person_to_POI* nor *from_POI_to_this_person* were included in the most influential features as I would have thought the level of interaction with a POI would have been a strong indicator of also being a POI. Plotting the data (Fig 3) it didn’t really show a strong correlation, hence the low score. However when I plotted the fraction of the total emails that went to a POI or came from a POI (Fig 4) I found a much clearer link. This made sense as email volumes can vary quite dramatically and so a percentage of the total is a far better indicator. Once I re-ran the SelectKBest the *fraction_emails_to_POI* became the 5th strongest feature. I used the above ten most important features in my final analysis.
 
-Fig 3.						Fig 4.
-  
+| Fig 3.	| Fig 4.	|
+| ------------- | --------------|
+| <img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/POI%20emails.png" width="400">	| <img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/Fraction%20of%20emails%20POI.png" width="400"> |
 
 ####Algorithm
 
-I looked at four different machine learning classifiers; Naïve Bayes, Decision Tree, K Means Clustering and Support Vector Machines (SVM). 
+I looked at four different machine learning classifiers; **Naïve Bayes**, **Decision Tree**, **K Means Clustering** and **Support Vector Machines (SVM)**. 
 
-Prior to training the K Means Clustering, Decision Tree and SVM classifiers I scaled all the features using the Min-Max feature scaler. This was incredibly important as the features had different units of measurement which varied by several orders of magnitude. By scaling the features it meant that I could use these classifiers and know that the features would be weighted evenly.
+Prior to training the K Means Clustering, Decision Tree and SVM classifiers I scaled all the features using the **Min-Max feature scaler**. This was incredibly important as the features had different units of measurement which varied by several orders of magnitude. By scaling the features it meant that I could use these classifiers and know that the features would be weighted evenly.
 
 | Algorithm		| Accuracy	| Precision	| Recall  |
 | --------------------- | ------------- | ------------- | ------- |
-| **Naïve Bayes**	| 0.33547	| 0.14750	| 0.83350 |
-| **Decision Tree**	| 0.82047	| 0.32632	| 0.32550 |
-| **K Means Clustering**| 0.83760	| 0.23086	| 0.09350 |
-| **SVM**		| 0.84119	| 0.26882	| 0.15700 |
+| *Naïve Bayes* 	| 0.33547	| 0.14750	| 0.83350 |
+| *Decision Tree*	| 0.82047	| 0.32632	| 0.32550 |
+| *K Means Clustering*  | 0.83760	| 0.23086	| 0.09350 |
+| *SVM*			| 0.84119	| 0.26882	| 0.15700 |
 
 The tuning parameters and the detailed scoring for each model can be found below:
 
@@ -86,7 +84,7 @@ SVC(C=1000, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.0, k
 
 Accuracy = 0.84119, Precision = 0.26882, Recall = 0.15700
 
-After testing these different algorithms I decided to use the Decision Tree classifier as it performed best across the three evaluation metrics. I tuned the DecisionTreeClassifier using GridSearchCV. I tuned on both criterion (the function used to measure the quality of the split) as well as the splitter (the strategy used to choose the split at each node). The best parameters were:
+After testing these different algorithms I decided to use the Decision Tree classifier as it performed best across the three evaluation metrics. I tuned the DecisionTreeClassifier using **GridSearchCV**. I tuned on both criterion (the function used to measure the quality of the split) as well as the splitter (the strategy used to choose the split at each node). The best parameters were:
 
 DecisionTreeClassifier() - {'splitter': 'random', 'criterion': 'gini'} 
 
@@ -97,9 +95,9 @@ Validation is performed to ensure that a machine learning algorithm generalises 
 
 ####Evaluation
 
-Precision is the rate at which the algorithm correctly predicts the POI. It is the ratio of true positives to the records that are actually POIs. It is calculated by: True Positives/(True Positives + False Negatives). My DecisionTreeClassifier had a precision of 0.32632
+**Precision** is the rate at which the algorithm correctly predicts the POI. It is the ratio of true positives to the records that are actually POIs. It is calculated by: True Positives/(True Positives + False Negatives). My DecisionTreeClassifier had a precision of 0.32632
 
-Recall measures the sensitivity and refers to the proportion of the POI the model can detect of all the POI. Recall is calculated as True Positives/(True Positives + False Positives). My model achieved a recall score of 0.32550.
+**Recall** measures the sensitivity and refers to the proportion of the POI the model can detect of all the POI. Recall is calculated as True Positives/(True Positives + False Positives). My model achieved a recall score of 0.32550.
 
 In this investigation accuracy was not a good metric given the high number of non-POIs in the dataset. For example if non-POI had been predicted for all records then an accuracy of over 87% could have been achieved.
 
@@ -108,6 +106,9 @@ In this investigation accuracy was not a good metric given the high number of no
 The Enron dataset provided a very interesting challenge of how to apply machine learning methods to a small but complex dataset.  The data needed to be cleaned and then a combination of machine learning classifiers, parameter tuning and cross-validation techniques led to the creation of a reliable predictive model for POIs which tried to maximise the recall and precision while maintaining a high accuracy score.
 
 I enjoyed the challenge of studying machine learning techniques and the data workflows required for data analysis in Python. 
+
+
+
 
 
 ####References
