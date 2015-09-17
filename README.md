@@ -108,6 +108,9 @@ The Enron dataset provided a very interesting challenge of how to apply machine 
 I enjoyed the challenge of studying machine learning techniques and the data workflows required for data analysis in Python. 
 
 
+
+
+
 ####References
 
 Udacity module page - https://www.udacity.com/course/intro-to-machine-learning--ud120  
