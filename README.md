@@ -1,17 +1,16 @@
 ud120-projects
 ==============
 
-##Identifying Fraud at Enron using Emails and Financial Data
-##Udacity Data Analysis Nanodegree – Project 4
+###Identifying Fraud at Enron using Emails and Financial Data - Udacity Data Analysis Nanodegree – Project 4
 
 
-###Introduction
+####Introduction
 
 Enron Corporation was one of the world’s largest energy companies before it went bankrupt in December 2001. It was revealed that the bankruptcy was caused by ‘institutionalized, systematic and creatively planned accounting fraud’. Subsequent legal trials found several members of Enron’s board guilty of being involved in the financial fraud. 
 
 For this project I have attempted to identify the Persons of Interest (POI) involved in fraudulent activity which contributed to the collapse of Enron. To do this I have used several machine learning techniques to help characterise important features within the financial and email dataset and then used these to help predict which of the employees might be POIs.
 
-###Analysis
+####Analysis
 
 The dataset was made up of financial and email features. The email data contained both the content of the email messages and also associated metadata (sender and recipient information), the financial data had a range of features including salary, stock options, bonuses, expenses etc. There are 146 entries in the dataset with each entry having 21 features. It is worth noting that not every feature had a completed value and that the dataset contained a subset of the total Enron employees.
 
@@ -24,7 +23,7 @@ I also removed the entry for Eugene E. Lockhart since this row had no values for
 
 
 
-###Feature Selection
+####Feature Selection
 	
 In order to optimise and select the most relevant features I used the scikit-learn module SelectKBest to identify the top ten most influential features. 
 
@@ -45,7 +44,7 @@ When I first ran the SelectKBest algorithm the only email feature in the top ten
 Fig 3.						Fig 4.
   
 
-###Algorithm
+####Algorithm
 
 I looked at four different machine learning classifiers; Naïve Bayes, Decision Tree, K Means Clustering and Support Vector Machines (SVM). 
 
@@ -89,13 +88,11 @@ After testing these different algorithms I decided to use the Decision Tree clas
 DecisionTreeClassifier() - {'splitter': 'random', 'criterion': 'gini'} 
 
 
-
-
-###Validation
+####Validation
 
 Validation is performed to ensure that a machine learning algorithm generalises well. A classic mistake is overfitting, this is where a model is trained and performs very well on the training dataset but a lot worse on the test datasets. To avoid over-fitting I used cross_ validation to split the Enron data into a test and a training set. I took the average precision and recall over 1000 randomised tests splitting the data into 30% test and 70% training.
 
-###Evaluation
+####Evaluation
 
 Precision is the rate at which the algorithm correctly predicts the POI. It is the ratio of true positives to the records that are actually POIs. It is calculated by: True Positives/(True Positives + False Negatives). My DecisionTreeClassifier had a precision of 0.32632
 
@@ -103,14 +100,14 @@ Recall measures the sensitivity and refers to the proportion of the POI the mode
 
 In this investigation accuracy was not a good metric given the high number of non-POIs in the dataset. For example if non-POI had been predicted for all records then an accuracy of over 87% could have been achieved.
 
-###Conclusion
+####Conclusion
 
 The Enron dataset provided a very interesting challenge of how to apply machine learning methods to a small but complex dataset.  The data needed to be cleaned and then a combination of machine learning classifiers, parameter tuning and cross-validation techniques led to the creation of a reliable predictive model for POIs which tried to maximise the recall and precision while maintaining a high accuracy score.
 
 I enjoyed the challenge of studying machine learning techniques and the data workflows required for data analysis in Python. 
 
 
-###References
+####References
 
 Udacity module page - https://www.udacity.com/course/intro-to-machine-learning--ud120
 Enron Wikipedia - https://en.wikipedia.org/wiki/Enron
