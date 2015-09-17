@@ -14,7 +14,7 @@ The original dataset contained an entry for the **TOTAL** of all the financial f
 
 | Fig 1.	| Fig 2.	|
 | ------------- | --------------|
-| <img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/Enron%20data.png" width="400"	| <img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/Outliers2.png" width="400"> |
+| <img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/Enron%20data.png" width="400">	| <img src="https://github.com/Bonz07/ud120-projects/blob/master/final_project/Outliers2.png" width="400"> |
 
 
 I also removed the entry for **Eugene E. Lockhart** since this row had no values for any of the features. Finally after looking at the data in more detail I removed an entry for **The Travel Agency in the Park** as I was only interested in people for my machine learning model. After removing these three entries I was left with 143 records in the dataset.
