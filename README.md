@@ -1,17 +1,17 @@
 ud120-projects
 ==============
 
-Identifying Fraud at Enron using Emails and Financial Data
-Udacity Data Analysis Nanodegree – Project 4
+#Identifying Fraud at Enron using Emails and Financial Data
+#Udacity Data Analysis Nanodegree – Project 4
 
 
-Introduction
+##Introduction
 
 Enron Corporation was one of the world’s largest energy companies before it went bankrupt in December 2001. It was revealed that the bankruptcy was caused by ‘institutionalized, systematic and creatively planned accounting fraud’. Subsequent legal trials found several members of Enron’s board guilty of being involved in the financial fraud. 
 
 For this project I have attempted to identify the Persons of Interest (POI) involved in fraudulent activity which contributed to the collapse of Enron. To do this I have used several machine learning techniques to help characterise important features within the financial and email dataset and then used these to help predict which of the employees might be POIs.
 
-Analysis
+##Analysis
 
 The dataset was made up of financial and email features. The email data contained both the content of the email messages and also associated metadata (sender and recipient information), the financial data had a range of features including salary, stock options, bonuses, expenses etc. There are 146 entries in the dataset with each entry having 21 features. It is worth noting that not every feature had a completed value and that the dataset contained a subset of the total Enron employees.
 
