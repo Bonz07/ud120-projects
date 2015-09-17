@@ -52,10 +52,10 @@ Prior to training the K Means Clustering, Decision Tree and SVM classifiers I sc
 
 | Algorithm		| Accuracy	| Precision	| Recall  |
 | --------------------- | ------------- | ------------- | ------- |
-| Naïve Bayes		| 0.33547	| 0.14750	| 0.83350 |
-| Decision Tree		| 0.82047	| 0.32632	| 0.32550 |
-| K Means Clustering 	| 0.83760	| 0.23086	| 0.09350 |
-| SVM			| 0.84119	| 0.26882	| 0.15700 |
+| **Naïve Bayes**	| 0.33547	| 0.14750	| 0.83350 |
+| **Decision Tree**	| 0.82047	| 0.32632	| 0.32550 |
+| **K Means Clustering**| 0.83760	| 0.23086	| 0.09350 |
+| **SVM**		| 0.84119	| 0.26882	| 0.15700 |
 
 The tuning parameters and the detailed scoring for each model can be found below:
 
