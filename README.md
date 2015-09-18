@@ -1,7 +1,7 @@
-Identifying Fraud at Enron
+Identifying Fraud at Enron  
 ==============
 Udacity Data Analysis Nanodegree
-==============
+
 
 ####Introduction
 
