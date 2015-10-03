@@ -27,6 +27,15 @@ data_dict = pickle.load(open("final_project_dataset.pkl", "r") )
 #for i in data_dict:
 #    print i
 
+###describe main features of data
+
+#poi_total = 0
+#print len(data_dict)
+#for i in data_dict:
+ #   if data_dict[i]['poi'] == True:
+ #       poi_total += 1
+#print poi_total
+
 ###Identify any employees that have no values for any of the features
 #for i in data_dict:
 #    cache = 0
@@ -119,13 +128,14 @@ features = scaler.fit_transform(features)
 
 ##Support Vector Machines
 #from sklearn.svm import SVC
-#clf = SVC(kernel='rbf', C=1000)
+#clf = SVC()
 
 #from sklearn.grid_search import GridSearchCV
-#parameters = {'C':[1000]}
-#svr = SVC(kernel='rbf')
+#parameters = {'kernel':('rbf', 'linear', 'poly'),'C':[1,1000], 'gamma':[0.0,1000]}
+#svr = SVC()
 #clf = GridSearchCV(svr, parameters).fit(features, labels)
 #print clf.best_estimator_
+#print clf.best_params_
 
 ##K Means Clustering
 #from sklearn.cluster import KMeans
